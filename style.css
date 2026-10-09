@@ -1,0 +1,424 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f8fc;
+    color: #18344a;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h2 {
+    color: #087e8b;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #18344a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #087e8b;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #d9f4f4, #e8efff);
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    color: #123b5d;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #536b7b;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #087e8b;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #065b66;
+    transform: translateY(-2px);
+}
+
+main,
+.medicines,
+.monitor {
+    padding: 55px 7%;
+}
+
+main h2,
+.medicines h2,
+.monitor h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #123b5d;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(22, 61, 85, 0.07);
+    border-bottom: 4px solid #26a6a1;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(22, 61, 85, 0.12);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #087e8b;
+}
+
+.medicines {
+    background: #e8f5f8;
+}
+
+#medicineForm {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+input {
+    padding: 13px;
+    border: 1px solid #cbdce5;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+button {
+    padding: 13px 22px;
+    background: #087e8b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #065b66;
+}
+
+.medicine-item {
+    background: white;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.medicine-item p {
+    color: #536b7b;
+}
+
+.taken {
+    color: #16834a;
+    font-weight: bold;
+}
+
+.note {
+    margin-top: 18px;
+    padding: 14px;
+    background: #fff4d9;
+    border-radius: 8px;
+    color: #795b17;
+    font-size: 14px;
+}
+
+footer {
+    background: #123b5d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #medicineForm {
+        flex-direction: column;
+    }
+
+    #medicineForm input,
+    #medicineForm button {
+        width: 100%;
+    }
+}
+
+.datetime {
+    background: linear-gradient(135deg, #ffffff, #eaf8fc);
+    padding: 20px 25px;
+    margin-top: 22px;
+    border-radius: 14px;
+    display: inline-block;
+    box-shadow: 0 5px 18px rgba(0, 80, 120, 0.12);
+    border-left: 5px solid #087e8b;
+}
+
+.datetime h3 {
+    color: #087e8b;
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.datetime p {
+    color: #536b7b;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Medicine reminder notification styling */
+.medicine-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #ffffff;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border-left: 5px solid #087e8b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.medicine-item:hover {
+    transform: translateY(-3px);
+}
+
+.medicine-item strong {
+    display: block;
+    color: #163b50;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.medicine-item p {
+    color: #607786;
+    margin: 5px 0;
+}
+
+.medicine-item .taken {
+    color: #198754;
+    font-weight: bold;
+}
+
+.medicine-item button {
+    background: #087e8b;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.medicine-item button:hover {
+    background: #065f6a;
+}
+
+@media (max-width: 600px) {
+    .datetime {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .datetime h3 {
+        font-size: 22px;
+    }
+
+    .medicine-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .medicine-item button {
+        margin-top: 5px;
+    }
+}
+
+.history-section {
+    background: #f4faff;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 16px;
+}
+
+.history-section h2 {
+    color: #087e8b;
+    margin-bottom: 8px;
+}
+
+.history-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.history-card {
+    background: white;
+    padding: 24px 15px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    border-bottom: 4px solid #087e8b;
+}
+
+.history-card h3 {
+    color: #087e8b;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.history-card p {
+    color: #536b7b;
+}
+
+.project-info {
+    background: white;
+    padding: 24px;
+    margin: 22px 0;
+    border-radius: 14px;
+    border-left: 5px solid #087e8b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.project-info h3 {
+    color: #087e8b;
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    color: #536b7b;
+    line-height: 1.8;
+}
+
+.safety-notice {
+    background: #fff8e8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    border-left: 5px solid #e5a000;
+}
+
+.safety-notice h3 {
+    color: #805800;
+    margin-bottom: 8px;
+}
+
+.safety-notice p {
+    color: #65583c;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .project-info,
+    .safety-notice {
+        padding: 16px;
+    }
+}

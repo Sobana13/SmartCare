@@ -1,0 +1,130 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCare | Medicine Reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>💙 SmartCare</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#medicines">Medicines</a>
+            <a href="#monitor">Health Monitor</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Smart Medicine Reminder<br>and Monitoring System</h1>
+        <p>Your health, our priority. Never miss your medicine again!</p>
+        <a href="#dashboard" class="btn">Explore Dashboard</a>
+    </section>
+
+    <main id="dashboard">
+        <h2>Health Dashboard</h2>
+        <p>Welcome! Here's your health overview.</p>
+        
+<div class="project-info">
+    <h3>About SmartCare</h3>
+    <p>
+        SmartCare is a smart medicine reminder and health monitoring
+        web application designed to help users manage their medicine
+        schedules and track sample health readings in one place.
+    </p>
+</div>
+
+<div class="safety-notice">
+    <h3>⚠️ Health Safety Notice</h3>
+    <p>
+        The health readings shown are sample values for demonstration
+        purposes only. This website does not measure actual vital signs
+        or replace professional medical advice.
+    </p>
+</div>
+        <div class="datetime">
+    <h3 id="currentTime">Loading time...</h3>
+    <p id="currentDate"></p>
+</div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>❤️ Heart Rate</h3>
+                <p>72 BPM</p>
+            </div>
+
+            <div class="card">
+                <h3>🌡️ Temperature</h3>
+                <p>36.8 °C</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 SpO₂</h3>
+                <p>98%</p>
+            </div>
+
+            <div class="card">
+                <h3>💊 Medicines</h3>
+                <p id="medicineCount">0</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="medicines" id="medicines">
+        <h2>Medicine Reminder</h2>
+
+        <form id="medicineForm">
+            <input type="text" id="medicineName"
+                placeholder="Enter medicine name" required>
+
+            <input type="time" id="medicineTime" required>
+
+            <button type="submit">Add Medicine</button>
+        </form>
+
+        <div id="medicineList"></div>
+    </section>
+    </section>
+
+<section class="history-section" id="medicineHistory">
+    <h2>📋 Medicine History</h2>
+    <p>Track your medicine status</p>
+
+    <div class="history-cards">
+        <div class="history-card">
+            <h3 id="totalMedicines">0</h3>
+            <p>Total Medicines</p>
+        </div>
+
+        <div class="history-card">
+            <h3 id="takenMedicines">0</h3>
+            <p>Medicines Taken</p>
+        </div>
+
+        <div class="history-card">
+            <h3 id="pendingMedicines">0</h3>
+            <p>Pending Medicines</p>
+        </div>
+    </div>
+</section>
+
+    <section class="monitor" id="monitor">
+        <h2>Health Monitoring</h2>
+        <p>Monitor your health information in one place.</p>
+        <p>Connected IoT sensors can be integrated in the future.</p>
+        <p class="note">Dashboard readings are sample data for demonstration only.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 SmartCare | PDL Lab Project</p>
+        <p>Designed for better medicine management 💙</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
